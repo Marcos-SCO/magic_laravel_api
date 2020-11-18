@@ -21,7 +21,7 @@ class StaffMembersTable extends Migration
             $table->unsignedInteger('staff_type_id');
 
             // Staff type id is foreign key
-            $table->foreign('staff_type_id')->references('staff_type_id')->on('staff_types');
+            $table->foreign('staff_type_id')->references('staff_type_id')->on('staff_types')->onDelete('cascade');
 
             $table->timestamps();
         });

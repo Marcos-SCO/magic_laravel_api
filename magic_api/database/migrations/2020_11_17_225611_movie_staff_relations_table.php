@@ -20,8 +20,8 @@ class MovieStaffRelationsTable extends Migration
             $table->unsignedInteger('movie_id');
             $table->unsignedInteger('staff_member_id');
 
-            $table->foreign('movie_id')->references('movie_id')->on('movies');
-            $table->foreign('staff_member_id')->references('staff_member_id')->on('staff_members');
+            $table->foreign('movie_id')->references('movie_id')->on('movies')->onDelete('cascade');
+            $table->foreign('staff_member_id')->references('staff_member_id')->on('staff_members')->onDelete('cascade');
 
             $table->timestamps();
         });

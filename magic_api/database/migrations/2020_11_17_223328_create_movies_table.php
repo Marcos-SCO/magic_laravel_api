@@ -19,7 +19,7 @@ class CreateMoviesTable extends Migration
             $table->unsignedInteger('movie_category_id');
             $table->string('movie_description');
 
-            $table->foreign('movie_category_id')->references('movie_category_id')->on('movie_categories');
+            $table->foreign('movie_category_id')->references('movie_category_id')->on('movie_categories')->onDelete('cascade');
 
             $table->timestamps();
         });
