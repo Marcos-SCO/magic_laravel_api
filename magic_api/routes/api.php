@@ -6,24 +6,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\StaffTypesController;
 use App\Http\Controllers\api\MovieCategoriesController;
 use App\Http\Controllers\api\MoviesController;
+use App\Http\Controllers\api\MovieStaffRelationsController;
 use App\Http\Controllers\api\StaffMembersController;
 
 /*
 |--------------------------------------------------------------------------
 | API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-// Route::apiResource('funcionarioTipos','api/StaffTypesController');
+// ------------------------------------------------------
+// -------------------- Staff Types ---------------------
+// ------------------------------------------------------
 
 // Pega os tipos de funcionário
 Route::get('/tiposfuncionarios', [StaffTypesController::class, 'index']);
@@ -68,7 +65,7 @@ Route::put('/categorias', [MovieCategoriesController::class, 'update']);
 Route::delete('/categorias', [MovieCategoriesController::class, 'destroy']);
 
 // ------------------------------------------------------
-// ------------------ Movies ------------------
+// ------------------ Movies ----------------------------
 // ------------------------------------------------------
 
 // Pega os tipos de filme
@@ -81,3 +78,19 @@ Route::post('/filmes', [MoviesController::class, 'store']);
 Route::put('/filmes', [MoviesController::class, 'update']);
 // Deleta um tipo de funcionário
 Route::delete('/filmes', [MoviesController::class, 'destroy']);
+
+
+// ------------------------------------------------------
+// ------------- Movies Staff relations -----------------
+// ------------------------------------------------------
+
+// Pega os tipos de filme
+Route::get('/relacoes', [MovieStaffRelationsController::class, 'index']);
+// Pega um tipo de filme por meio do Id
+Route::get('/relacao/{id}', [MovieStaffRelationsController::class, 'show']);
+// Cria um filme
+Route::post('/relacoes', [MovieStaffRelationsController::class, 'store']);
+// Atualiza um tipo de funcionário passando os valores
+Route::put('/relacoes', [MovieStaffRelationsController::class, 'update']);
+// Deleta um tipo de funcionário
+Route::delete('/relacoes', [MovieStaffRelationsController::class, 'destroy']);
