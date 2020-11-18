@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\api\MovieCategoriesController;
-use App\Http\Controllers\api\StaffMembersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\api\StaffTypesController;
+use App\Http\Controllers\api\MovieCategoriesController;
+use App\Http\Controllers\api\MoviesController;
+use App\Http\Controllers\api\StaffMembersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +66,18 @@ Route::post('/categorias', [MovieCategoriesController::class, 'store']);
 Route::put('/categorias', [MovieCategoriesController::class, 'update']);
 // Deleta um tipo de funcionário
 Route::delete('/categorias', [MovieCategoriesController::class, 'destroy']);
+
+// ------------------------------------------------------
+// ------------------ Movies ------------------
+// ------------------------------------------------------
+
+// Pega os tipos de filme
+Route::get('/filmes', [MoviesController::class, 'index']);
+// Pega um tipo de filme por meio do Id
+Route::get('/filme/{id}', [MoviesController::class, 'show']);
+// Cria um filme
+Route::post('/filmes', [MoviesController::class, 'store']);
+// Atualiza um tipo de funcionário passando os valores
+Route::put('/filmes', [MoviesController::class, 'update']);
+// Deleta um tipo de funcionário
+Route::delete('/filmes', [MoviesController::class, 'destroy']);
