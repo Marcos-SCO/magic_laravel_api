@@ -1,0 +1,10 @@
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (1, 'Drama', '2020-03-17', '2020-10-20');
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (2, 'Comedia', '2020-01-22', '2020-08-18');
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (3, 'Documentário', '2020-09-10', '2019-11-22');
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (4, 'Sci-Fi', '2020-02-28', '2019-12-22');
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (5, 'Ação', '2020-01-14', '2020-03-14');
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (6, 'Romance', '2020-07-10', '2020-04-06');
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (7, 'Animação', '2020-04-13', '2020-02-19');
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (8, 'Aventura', '2020-08-12', '2020-07-19');
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (9, 'Fantasia', '2020-09-17', '2020-01-18');
+insert into movie_categories (movie_category_id, category_description, created_at, updated_at) values (10, 'Guerra', '2020-09-04', '2020-05-15');
