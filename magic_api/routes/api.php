@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\MovieCategoriesController;
 use App\Http\Controllers\api\StaffMembersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -49,3 +50,18 @@ Route::post('/funcionarios', [StaffMembersController::class, 'store']);
 Route::put('/funcionarios', [StaffMembersController::class, 'update']);
 // Deleta um tipo de funcionário
 Route::delete('/funcionarios', [StaffMembersController::class, 'destroy']);
+
+// ------------------------------------------------------
+// ------------------ Movie Categories ------------------
+// ------------------------------------------------------
+
+// Pega os tipos de funcionário
+Route::get('/categorias', [MovieCategoriesController::class, 'index']);
+// Pega um tipo de funcionário por meio do Id
+Route::get('/categoria/{id}', [MovieCategoriesController::class, 'show']);
+// Cria um funcionário passando os valores com form-data
+Route::post('/categorias', [MovieCategoriesController::class, 'store']);
+// Atualiza um tipo de funcionário passando os valores com form-data
+Route::put('/categorias', [MovieCategoriesController::class, 'update']);
+// Deleta um tipo de funcionário
+Route::delete('/categorias', [MovieCategoriesController::class, 'destroy']);
