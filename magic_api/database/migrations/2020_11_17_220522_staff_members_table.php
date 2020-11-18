@@ -17,6 +17,7 @@ class StaffMembersTable extends Migration
             $table->increments('staff_member_id');
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('email');
             $table->unsignedInteger('staff_type_id');
 
             // Staff type id is foreign key
