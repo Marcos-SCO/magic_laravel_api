@@ -5,7 +5,7 @@ Magic API
 
 Projeto de api rest realizado como teste na Magic.
 
-### <p id='install'>🎞️ <a href='https://www.youtube.com/watch?v=XA7pdpVs1E8&feature=youtu.be' targe='_blank'>Vídeo de demonstração</a></p>
+<br/>
 
 ### <p id='tecnology'>🖥 Tecnologias</p>
 
@@ -96,3 +96,5 @@ Método: DELETE
         {
             "email" : ”email” 
         }
+
+### <p id='install'>🎞️ <a href='https://www.youtube.com/watch?v=XA7pdpVs1E8&feature=youtu.be' targe='_blank'>Veja também um vídeo de demonstração, onde apresento o projeto</a></p>
